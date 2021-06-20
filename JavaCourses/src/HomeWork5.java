@@ -4,15 +4,16 @@ public class HomeWork5 {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.println("Введите первое число:");
         int num1 = getInt1();//считывает с консоли число и возвращает его
-        int num2 = getInt2();
+        System.out.println("Введите второе число:");
+        int num2 = getInt1();
         char operation = getOperation();//считает с консоли операцию
         int result = calc(num1,num2,operation);//результат вычисления
         System.out.println("Результат операции: "+ result);
     }
 
     public static int getInt1(){
-        System.out.println("Введите первое число:");
         int num1;
         if(scanner.hasNextInt()){
             num1 = scanner.nextInt();
@@ -21,17 +22,6 @@ public class HomeWork5 {
             num1 = getInt1();
         }
         return num1;
-    }
-    public static int getInt2(){
-        System.out.println("Введите второе число:");
-        int num2;
-        if(scanner.hasNextInt()){
-            num2 = scanner.nextInt();
-        } else {
-            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            num2 = getInt1();
-        }
-        return num2;
     }
 
     public static char getOperation(){
