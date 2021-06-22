@@ -33,21 +33,33 @@ public class HomeWork6 {
                     System.out.println("Введите количество метров:");
                     numLogic = scanner.nextInt();
                     System.out.println("Метры: " + numLogic);
+                    System.out.println("Мили: " + (float)numLogic / 1609);//долго морочился, но ключ так и не нашел
+                    System.out.println("Ярды: " + numLogic * 1.094F);
+                    System.out.println("Футы: " + (numLogic * 3.281));
                     break;
                 case 2:
                     System.out.println("Введите количество миль:");
                     numLogic = scanner.nextInt();
-                    System.out.println("Мили: " + (float)numLogic / 1609);//долго морочился, но ключ так и не нашел
+                    System.out.println("Мили: " + numLogic);
+                    System.out.println("Метры: " + numLogic * 1609);
+                    System.out.println("Ярды: " + numLogic * 1760);
+                    System.out.println("Футы: " + (numLogic * 5280));
                     break;
                 case 3:
                     System.out.println("Введите количество ярдов:");
                     numLogic = scanner.nextInt();
-                    System.out.println("Ярды: " + numLogic * 1.094F);
+                    System.out.println("Ярды: " + numLogic);
+                    System.out.println("Метры: " + (float)numLogic / 1.094F);
+                    System.out.println("Мили: " + (float)numLogic / 1760);
+                    System.out.println("Футы: " + (numLogic * 3));
                     break;
                 case 4:
                     System.out.println("Введите количество футов: ");
                     numLogic = scanner.nextInt();
-                    System.out.println("Футы: " + (numLogic * 3.281));
+                    System.out.println("Футы: " + (numLogic));
+                    System.out.println("Метры: " + (numLogic/3.281F));
+                    System.out.println("Мили: " + (float)numLogic / 5280);
+                    System.out.println("Ярды: " + numLogic / 3f);
                     break;
                 default:
                     System.out.println("Ошибка вычисления операции.Введите 2 для повтора программы.");
