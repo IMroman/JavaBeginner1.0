@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class HomeWork8 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите положительное целое число");
         firstMethod();
     }
