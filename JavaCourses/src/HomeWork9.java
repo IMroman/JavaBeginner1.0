@@ -7,7 +7,7 @@ public class HomeWork9 {
         System.out.println("Введите размер массива");
         int size = scanner.nextInt();
         System.out.println("Введите данные массива");
-        double [] u = new double[size];
+        double[] u = new double[size];
         double[] array = new double[size];
 
             for (int i = 0; i < size; i++) {
