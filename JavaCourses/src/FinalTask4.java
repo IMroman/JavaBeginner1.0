@@ -11,31 +11,34 @@ public class FinalTask4 {
         Если на первой попытке он введет строку “Подсказка”, вывести любую подсказку. Если на 2 и 3, вывести “Подсказка уже недоступна”.
         Если пользователь, использовавший подсказку, ошибется,
         вывести “Обидно, приходи в другой раз” и завершить работу.*/
-
+        Scanner sc = new Scanner(System.in);
         System.out.println("Сидит дед, во сто шуб одет, кто его раздевает, тот слезы проливает");
-
-        String answer = "Заархивированный вирус";
-        String help = "Тут есть слово \"Вирус\", а еще он сжат =)";
-        int val = 3;
-
-        Scanner scn = new Scanner(System.in);
-
-        while (val != 0) {
-            String s = scn.nextLine();
-            if (s.equals(answer)) {
-                System.out.println("Правильно!");
-                return;
-            } else if (s.equals("Подсказка") && val == 3) {
-                val = 2;
-                System.out.println(help);
-            } else if (s.equals("Подсказка")) {
-                System.out.println("Подсказка уже недоступна");
-                val++;
-            } else {
-                if (val == 1) System.out.println("Обидно, приходи в другой раз");
-                else System.out.println("Подумай еще!");
+        String sc1 = sc.nextLine();
+        String str1 = "Заархивированный вирус";
+        String str2 = "Подсказка";
+        if (sc1.equals(str1)) {
+            System.out.println("Правильно");
+        } else {
+            if (sc1.equals(str2)) {
+                System.out.println("Тут есть слово \"Вирус\", а еще он сжат =)");
             }
-            val--;
+            System.out.println("Подумай еще");
+            if (sc.nextLine().equals(str1)) {
+                System.out.println("Правильно");
+            } else {
+                if (sc1.equals(str2)) {
+                    System.out.println("Подсказка уже недоступна");
+                }
+                System.out.println("Подумай еще");
+                if (sc.nextLine().equals(str1)) {
+                    System.out.println("Правильно");
+                } else {
+                    if (sc1.equals(str2)) {
+                        System.out.println("Подсказка уже недоступна");
+                    }
+                    System.out.println("Обидно, приходи в другой раз");
+                }
+            }
         }
     }
 }
